@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get("/", {:controller => "dashboard" , :action => "home_dashboard"})
   get("/forex", {:controller => "dashboard" , :action => "forex_dashboard"})
-  get("/forex/:symbols", {:controller => "dashboard" , :action => "convert_to_dashboard"})
+  get("/forex/:from_currency", {:controller => "dashboard" , :action => "second_currency"})
+  get("/forex/:from_currency/:second_currency" , {:controller => "dashboard" , :action => "currency_conversion"})
 
 end
